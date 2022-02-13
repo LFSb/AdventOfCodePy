@@ -3,7 +3,7 @@ import os
 with open(f"{os.getcwd()}/2021/Input/Day1.txt", "r") as file:
   arr = [int(i) for i in file]
 
-if __name__ == "__main__":
+def p1():
   increases = 0
   prev = arr[0]
 
@@ -12,5 +12,22 @@ if __name__ == "__main__":
       increases += 1
     
     prev = arr[i]
+    
+  return increases
 
-  print(increases)
+def p2():
+  increases = 0
+  prev = arr[0] + arr[1] + arr[2]
+
+  for i in range(0, len(arr) - 2):
+    sum = arr[i] + arr[i + 1] + arr[i + 2]
+    if sum > prev:
+      increases += 1
+
+    prev = sum
+  return increases
+
+
+if __name__ == "__main__":
+  print(p1())
+  print(p2())
