@@ -9,7 +9,7 @@ def returnFileAsArrayOfInt(day, isTest):
 
 def returnFileAsArray(day, isTest):
     with open(returnPath(day, isTest), "r") as file:
-        return file.readlines()
+        return file.read().splitlines()
 
 
 def returnPath(day, isTest):
