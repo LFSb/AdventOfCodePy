@@ -1,4 +1,5 @@
-import os
+import pathlib
+base = pathlib.Path(__file__).parent.resolve()
 
 
 def returnFileAsArrayOfInt(day, isTest):
@@ -14,4 +15,4 @@ def returnFileAsArray(day, isTest):
 
 def returnPath(day, isTest):
     test = "Test" if isTest == True else ""
-    return f"{os.getcwd()}/2021/Input/Day{day}{test}.txt"
+    return f"{base}/Input/Day{day}{test}.txt"
