@@ -1,7 +1,6 @@
-import os
+from Util import returnFileAsArrayOfInt
 
-with open(f"{os.getcwd()}/2021/Input/Day1.txt", "r") as file:
-  arr = [int(i) for i in file]
+arr = returnFileAsArrayOfInt(1)
 
 def p1():
   increases = 0
@@ -26,7 +25,6 @@ def p2():
 
     prev = sum
   return increases
-
 
 if __name__ == "__main__":
   print(p1())
