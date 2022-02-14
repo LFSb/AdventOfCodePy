@@ -1,6 +1,6 @@
 from Util import returnFileAsArray
 
-arr = returnFileAsArray(3, False)
+arr = returnFileAsArray(3, True)
 
 
 def p1():
@@ -13,8 +13,8 @@ def p1():
     for x in range(0, lineLength):  # depth
         res = ""
 
-        for i in range(0, len(arr)):
-            res += arr[i][x]
+        for y in range(0, len(arr)):
+            res += arr[y][x]
 
         ones = res.count('1')
 
@@ -29,7 +29,19 @@ def p1():
 
 
 def p2():
-    return "p2"
+    lineLength = len(arr[0])
+    halfway = len(arr) / 2
+
+    lsr = ""
+    ogr = ""
+
+    for x in range(0, lineLength):  # depth
+        res = ""
+
+        for y in range(0, len(arr)):
+            res += arr[y][x]
+
+        ones = res.count('1')
 
 
 if __name__ == "__main__":
