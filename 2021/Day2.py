@@ -1,6 +1,6 @@
 from Util import returnFileAsArray
 
-arr = returnFileAsArray(2)
+arr = returnFileAsArray(2, False)
 
 def p1():
   depth = 0

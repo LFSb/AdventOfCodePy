@@ -1,6 +1,6 @@
 from Util import returnFileAsArrayOfInt
 
-arr = returnFileAsArrayOfInt(1)
+arr = returnFileAsArrayOfInt(1, False)
 
 def p1():
   increases = 0
