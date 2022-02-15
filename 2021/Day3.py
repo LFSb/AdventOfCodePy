@@ -41,14 +41,12 @@ def bitwiseFilterArray(arr, isMsb):
 
     result = ""
 
-    for x in range(0, lineLength):  # depth
+    for x in range(0, lineLength):  # travel the array by depth
         res = returnSlicedPostionOfArray(x, arr)
 
         halfway = len(arr) / 2
 
         msb = '1' if res.count('1') >= halfway else '0'
-
-        #print(f"filtering msb {msb} on position {x}")
 
         if(isMsb):
             arr = list(filter(lambda l: l[x] == msb, arr))
